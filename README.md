@@ -1,12 +1,12 @@
 # Lung_Cancer-Prediction-DSA-Project
 
-#Importing Libraries
+# Importing Libraries
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
 import seaborn as sns
 
-#For ignoring warning
+# For ignoring warning
 import warnings
 warnings.filterwarnings("ignore")
 
@@ -17,15 +17,15 @@ df=pd.read_csv('lung_cancer.csv')
 df.shape
 
 
-#To Check for Duplicates
+# To Check for Duplicates
 df.duplicated().sum()
 
 
-#To Remove Duplicates
+# To Remove Duplicates
 df=df.drop_duplicates()
 
 
-#To Check for null values
+# To Check for null values
 df.isnull().sum()
 
 #
@@ -42,9 +42,7 @@ df.tail()
 
 
 
-
-
-#convert gender to numeric values using LabelEncoder from sklearn. , Yes(MALE) = 1 and No(FEMALE)= 0
+# convert gender to numeric values using LabelEncoder from sklearn. , Yes(MALE) = 1 and No(FEMALE)= 0
 from sklearn import preprocessing
 le=preprocessing.LabelEncoder()
 df['GENDER']=le.fit_transform(df['GENDER'])
@@ -66,7 +64,7 @@ df['LUNG_CANCER']=le.fit_transform(df['LUNG_CANCER'])
 
 
 
-#To check
+# To check
 df
 
 
@@ -78,7 +76,7 @@ df.info()
 
 
 
-#To check the distributaion of Target variable.
+# To check the distributaion of Target variable.
 sns.countplot(x='LUNG_CANCER', data=df,)
 plt.title('Target Distribution');
 
