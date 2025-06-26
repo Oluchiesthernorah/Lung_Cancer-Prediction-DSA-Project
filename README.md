@@ -91,31 +91,52 @@ def plot(col, df=df):
 
 
 plot('GENDER')
+![Capture 16](https://github.com/user-attachments/assets/75cd049a-1fb6-47d4-b3b6-7f96a3aee723)
 
 plot('AGE')
+![Capture 17](https://github.com/user-attachments/assets/ca97cb3e-e5c3-4af7-90ac-8845724f44e7)
 
 plot('SMOKING')
+![Capture 18](https://github.com/user-attachments/assets/7e3f7129-318d-4d65-a71f-733fb742b800)
 
 plot('YELLOW_FINGERS')
+![Capture 19](https://github.com/user-attachments/assets/72792b52-3711-405d-bbc0-528c520b01fc)
 
 plot('ANXIETY')
+![Capture 20](https://github.com/user-attachments/assets/ce01f178-b1ea-4fcc-8b17-daac08bd6b9e)
 
 plot('PEER_PRESSURE')
+![Capture 21](https://github.com/user-attachments/assets/2c7174a1-1da6-4f75-8818-fb24b0910965)
 
 plot('CHRONIC DISEASE')
+![Capture 22](https://github.com/user-attachments/assets/b63c8654-4776-4477-8daa-b1dcd5edcb78)
 
 plot('FATIGUE ')
+![Capture 23](https://github.com/user-attachments/assets/fed0b24f-8062-467c-9017-1bb3b7ec49e7)
 
 plot('ALLERGY ')
+![Capture 24](https://github.com/user-attachments/assets/64fff87f-5aaa-40bd-81de-bd74bebcd2b3)
 
 plot('WHEEZING')
+![Capture 25](https://github.com/user-attachments/assets/eee27bfe-26df-4e68-961e-d735da5c49a6)
 
 plot('ALCOHOL CONSUMING')
+![Capture 26](https://github.com/user-attachments/assets/cf613c9a-f3be-49d9-8baa-550313d7c8f3)
 
 plot('COUGHING')
+![Capture 27](https://github.com/user-attachments/assets/a5c46b8f-a375-4be5-810f-9da918fdfbda)
 
 plot('SHORTNESS OF BREATH')
+![Capture 28](https://github.com/user-attachments/assets/3c05a3e8-2d63-43b8-bfb5-9807328f10f9)
 
 plot('SWALLOWING DIFFICULTY')
+![Capture 29](https://github.com/user-attachments/assets/a104f67d-5ebd-42da-83b1-237e0906bc92)
 
 plot('CHEST PAIN')
+![Capture 30](https://github.com/user-attachments/assets/f11e4985-5b85-4ca2-b450-0fc360a5432f)
+
+
+
+
+![Capture 31](https://github.com/user-attachments/assets/53cb5ec4-99fd-4988-9e37-1c07ab9e8c93)
+
