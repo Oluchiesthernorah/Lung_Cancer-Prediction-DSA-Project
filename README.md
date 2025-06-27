@@ -15,30 +15,38 @@ warnings.filterwarnings("ignore")
 df=pd.read_csv('lung_cancer.csv')
 
 df.shape
+![Capture 3](https://github.com/user-attachments/assets/22aa17c4-885e-4076-af07-15d2b59f6b2b)
 
 
 # To Check for Duplicates
 df.duplicated().sum()
+![Capture 4](https://github.com/user-attachments/assets/cd2ccc94-e7e6-4989-a94f-2d9eac4bfbc4)
 
 
 # To Remove Duplicates
 df=df.drop_duplicates()
+![Capture 5](https://github.com/user-attachments/assets/09b2837b-8366-4615-9a08-b0cdddebac91)
 
 
 # To Check for null values
 df.isnull().sum()
 
-#
-df.info()
 
-#
+#Display index, columns and data
+df.info()
+![Capture 7](https://github.com/user-attachments/assets/21afcc86-7bee-42c1-9114-7e27be7fd1be)
+
+#Summary Statistics
 df.describe()
+![Capture 8](https://github.com/user-attachments/assets/09c933f1-1924-4def-adbe-721b9ccce0a2)
 
 # Display the first 5 rows
 df.head()
+![Capture 9](https://github.com/user-attachments/assets/8b604379-c333-4a46-8b86-5475f8773c18)
 
 # Display the first 5 rows
 df.tail()
+![Capture 10](https://github.com/user-attachments/assets/ba432050-7977-40e5-ba66-6ff1e4ae9527)
 
 
 
@@ -62,10 +70,12 @@ df['SWALLOWING DIFFICULTY']=le.fit_transform(df['SWALLOWING DIFFICULTY'])
 df['CHEST PAIN']=le.fit_transform(df['CHEST PAIN'])
 df['LUNG_CANCER']=le.fit_transform(df['LUNG_CANCER'])
 
+![Capture 11](https://github.com/user-attachments/assets/95c0cb2d-795b-4712-914b-1aeaab060b35)
 
 
 # To check
 df
+![Capture 12](https://github.com/user-attachments/assets/6431a40f-68ad-4d76-ba15-7833675d9a3a)
 
 
 
@@ -73,16 +83,19 @@ df
 
 #
 df.info()
+![Capture 13](https://github.com/user-attachments/assets/cc1b9109-5660-4025-820b-b970abfc02ca)
 
 
 
 # To check the distributaion of Target variable.
 sns.countplot(x='LUNG_CANCER', data=df,)
 plt.title('Target Distribution');
+![Capture 14](https://github.com/user-attachments/assets/2b65b28c-ab27-4744-8682-656ff841c141)
 
 
 
 df['LUNG_CANCER'].value_counts()
+![Capture 15](https://github.com/user-attachments/assets/d5d4e07a-adbc-4207-81f3-994576f632e4)
 
 
 # To visualize data
