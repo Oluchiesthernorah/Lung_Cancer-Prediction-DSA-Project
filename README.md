@@ -153,3 +153,51 @@ plot('CHEST PAIN')
 
 ![Capture 31](https://github.com/user-attachments/assets/53cb5ec4-99fd-4988-9e37-1c07ab9e8c93)
 
+
+![Capture 32](https://github.com/user-attachments/assets/11d2986e-5b91-4b0b-ad5d-5b78c02fdff2)
+
+
+![Capture 33](https://github.com/user-attachments/assets/32c62808-f3a8-40e1-94ab-d0a14f4944cb)
+
+
+
+
+![Capture 34](https://github.com/user-attachments/assets/24bd5fba-086b-435d-abac-cbee908aa799)
+
+
+![Capture 35](https://github.com/user-attachments/assets/80555beb-89a0-4553-8492-4ba9f4617b1b)
+
+
+![Capture 36](https://github.com/user-attachments/assets/f8405dfb-c90c-43e6-bd66-0552dc7d6644)
+
+
+
+![Capture 37](https://github.com/user-attachments/assets/3b491c03-41f6-46da-af37-fbd778408c8d)
+
+
+![Capture 38](https://github.com/user-attachments/assets/a527cdf5-7965-4a26-9eda-09206176a5eb)
+
+
+
+![Capture 39](https://github.com/user-attachments/assets/38036be8-0522-4bf8-8764-54bf642d435b)
+
+
+
+![Capture 40](https://github.com/user-attachments/assets/a6a5b7c1-37c4-48cd-ac12-bcb972888a5a)
+
+
+![Capture 41](https://github.com/user-attachments/assets/f3ff1c53-4efb-4c2a-9326-e122e38ebcb2)
+
+
+
+![Capture 42](https://github.com/user-attachments/assets/825a7393-6a4d-45e4-ad9b-2432fa31e6ca)
+
+
+![Capture 43](https://github.com/user-attachments/assets/a206b0aa-396b-4b08-9326-77e8ca4b85d3)
+
+
+
+
+
+
+
