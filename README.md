@@ -236,7 +236,9 @@ y_lr_pred
 from sklearn.metrics import classification_report, accuracy_score, f1_score
 lr_cr=classification_report(y_test, y_lr_pred)
 print(lr_cr)
+![Capture p1](https://github.com/user-attachments/assets/e2225e25-71ee-4cae-a340-15c15a33f58d)
 
+![Capture p4](https://github.com/user-attachments/assets/9c38be7b-5a8b-4a47-890a-dd2f073a91a4)
 
 
 #Random Forest
@@ -245,12 +247,13 @@ from sklearn.ensemble import RandomForestClassifier
 rf_model = RandomForestClassifier()
 rf_model.fit(X_train, y_train)
 RandomForestClassifier()
-
+![Capture p1](https://github.com/user-attachments/assets/10abb547-5a0e-48ad-b51c-1cffe25f3fb6)
 
 
 #Predicting result using testing data
 y_rf_pred= rf_model.predict(X_test)
 y_rf_pred
+![Capture p3](https://github.com/user-attachments/assets/3a31404c-e1cb-46f3-b8c7-9e05d5a4a2e6)
 
 
 
@@ -258,6 +261,7 @@ y_rf_pred
 #Model accuracy
 rf_cr=classification_report(y_test, y_rf_pred)
 print(rf_cr)
+![Capture p2](https://github.com/user-attachments/assets/e8391c3b-4572-4373-a458-ef0a0fd753a2)
 
 
 #XGBoost
