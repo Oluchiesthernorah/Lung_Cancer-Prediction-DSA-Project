@@ -258,16 +258,45 @@ y_rf_pred
 #Model accuracy
 rf_cr=classification_report(y_test, y_rf_pred)
 print(rf_cr)
+
+
+#XGBoost
+from xgboost import XGBClassifier
+xgb_model = XGBClassifier()
+xgb_model.fit(X_train, y_train)
 ![Capture 40](https://github.com/user-attachments/assets/a6a5b7c1-37c4-48cd-ac12-bcb972888a5a)
 
+
+#Predicting result using testing data
+y_xgb_pred= xgb_model.predict(X_test)
+y_xgb_pred
 
 ![Capture 41](https://github.com/user-attachments/assets/f3ff1c53-4efb-4c2a-9326-e122e38ebcb2)
 
 
-
+#Model accuracy
+xgb_cr=classification_report(y_test, y_xgb_pred)
+print(xgb_cr)
 ![Capture 42](https://github.com/user-attachments/assets/825a7393-6a4d-45e4-ad9b-2432fa31e6ca)
 
+# K-Fold Cross Validation
 
+from sklearn.model_selection import KFold
+from sklearn.model_selection import cross_val_score
+
+k = 10
+kf = KFold(n_splits=k, shuffle=True, random_state=42)
+
+
+# Logistic regerssion model
+lr_model_scores = cross_val_score(lr_model,X, y, cv=kf)
+
+# Decision tree model
+dt_model_scores = cross_val_score(dt_model,X, y, cv=kf)
+
+print("Logistic regression models' average accuracy:", np.mean(lr_model_scores))
+print("Random forest models' average accuracy:", np.mean(rf_model_scores))
+print("XGBoost models' average accuracy:", np.mean(xgb_model_scores))
 ![Capture 43](https://github.com/user-attachments/assets/a206b0aa-396b-4b08-9326-77e8ca4b85d3)
 
 
