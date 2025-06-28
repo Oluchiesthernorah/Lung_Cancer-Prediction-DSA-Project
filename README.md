@@ -150,10 +150,26 @@ plot('CHEST PAIN')
 
 
 
-
+#GENDER, AGE and SHORTNESS OF BREATH dont have that much relationship with LUNG CANCER. 
+#Hence we drop those features to make the dataset more clean.
+df_new=df.drop(columns=['GENDER','AGE', 'SHORTNESS OF BREATH'])
+df_new
 ![Capture 31](https://github.com/user-attachments/assets/53cb5ec4-99fd-4988-9e37-1c07ab9e8c93)
 
 
+CORRELATION
+#Finding Correlation
+cn=df_new.corr()
+
+
+
+
+#Correlation 
+cmap=sns.diverging_palette(260,-10,s=50, l=75, n=6,
+as_cmap=True)
+plt.subplots(figsize=(18,18))
+sns.heatmap(cn,cmap=cmap,annot=True, square=True)
+plt.show()
 ![Capture 32](https://github.com/user-attachments/assets/11d2986e-5b91-4b0b-ad5d-5b78c02fdff2)
 
 
@@ -161,28 +177,87 @@ plot('CHEST PAIN')
 
 
 
-
+kot = cn[cn>=.40]
+plt.figure(figsize=(12,8))
+sns.heatmap(kot, cmap="Purples")
 ![Capture 34](https://github.com/user-attachments/assets/24bd5fba-086b-435d-abac-cbee908aa799)
+
 
 
 ![Capture 35](https://github.com/user-attachments/assets/80555beb-89a0-4553-8492-4ba9f4617b1b)
 
 
+#The correlation matrix shows that ANXIETY and YELLOW_FINGERS are correlated more than 50%
+#To create a new feature combiningthem
+df_new['ANXYELFIN']=df_new['ANXIETY']*df_new['YELLOW_FINGERS'] 
+df_new
 ![Capture 36](https://github.com/user-attachments/assets/f8405dfb-c90c-43e6-bd66-0552dc7d6644)
 
 
 
+
+#Splitting independent and dependent variables
+X = df_new.drop('LUNG_CANCER', axis =1)
+y = df_new['LUNG_CANCER']
+
+
+
+#Target Distribution Imbalance Handling
+from imblearn.over_sampling import ADASYN
+adasyn = ADASYN(random_state=42)
+X, y = adasyn.fit_resample(X, y)
+
+
+len(X)
+
 ![Capture 37](https://github.com/user-attachments/assets/3b491c03-41f6-46da-af37-fbd778408c8d)
 
+
+#Logistic Regression
+#Splitting data for training and testing
+from sklearn.model_selection import train_test_split
+X_train, X_test, y_train, y_test= train_test_split(X, y, test_size= 0.25, random_state=0)
+
+#Fitting training data to the model
+from sklearn.linear_model import LogisticRegression
+lr_model=LogisticRegression(random_state=0)
+lr_model.fit(X_train, y_train)
 
 ![Capture 38](https://github.com/user-attachments/assets/a527cdf5-7965-4a26-9eda-09206176a5eb)
 
 
-
+#Predicting result using testing data
+y_lr_pred= lr_model.predict(X_test)
+y_lr_pred
 ![Capture 39](https://github.com/user-attachments/assets/38036be8-0522-4bf8-8764-54bf642d435b)
 
 
+#Model accuracy
+from sklearn.metrics import classification_report, accuracy_score, f1_score
+lr_cr=classification_report(y_test, y_lr_pred)
+print(lr_cr)
 
+
+
+#Random Forest
+#Training
+from sklearn.ensemble import RandomForestClassifier
+rf_model = RandomForestClassifier()
+rf_model.fit(X_train, y_train)
+RandomForestClassifier()
+
+
+
+#Predicting result using testing data
+y_rf_pred= rf_model.predict(X_test)
+y_rf_pred
+
+
+
+
+#Model accuracy
+rf_cr=classification_report(y_test, y_rf_pred)
+print(rf_cr)
 ![Capture 40](https://github.com/user-attachments/assets/a6a5b7c1-37c4-48cd-ac12-bcb972888a5a)
 
 
